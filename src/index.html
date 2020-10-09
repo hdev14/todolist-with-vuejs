@@ -27,7 +27,7 @@
           <p>{{ todo.description }}</p>
           <div>
             <input type="checkbox" name="done" v-model="todo.done">
-            <button v-if="!todo.done" @click="removeTodo(todo.id)">❌</button>
+            <button @click="removeTodo(todo.id)">❌</button>
           </div>
         </li>
       </ul>

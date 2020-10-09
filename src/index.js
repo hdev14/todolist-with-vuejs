@@ -7,11 +7,6 @@ const app = new Vue({
         id: 1,
         description: 'Do something amazing with VueJS 1',
         done: true
-      },
-      {
-        id: 2,
-        description: 'Do something amazing with VueJS 2',
-        done: false
       }
     ]
   },

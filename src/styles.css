@@ -112,6 +112,10 @@ ul {
   background-color: white;
 }
 
+#tasks ul li:hover:not(.done) {
+  transform: scale(1.03);
+}
+
 #tasks ul li + li {
   margin-top: 15px;
 }
