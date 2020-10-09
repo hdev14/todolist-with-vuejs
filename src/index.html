@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Chilanka&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Todo List with VueJS</title>
+</head>
+
+<body>
+  <div id="app">
+    <h1>Todo List with VueJS</h1>
+    <div id="tasks">
+
+      <div id="add">
+        <input
+          type="text"
+          placeholder="Digite uma nova tarefa."
+          v-model="newTodo">
+        <button @click="addTodo">Adicionar</button>
+      </div>
+
+      <ul>
+        <li v-for="todo in todos" :class="{ 'done': todo.done }" :key="todo.id">
+          <p>{{ todo.description }}</p>
+          <div>
+            <input type="checkbox" name="done" v-model="todo.done">
+            <button v-if="!todo.done" @click="removeTodo(todo.id)">❌</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --green: #42b983;
+  --darkblue: #35495e;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: var(--green);
+  font-family: 'Chilanka', cursive;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+#app {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 50px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #fefefe;
+  box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.25);
+}
+
+#app h1 {
+  font-size: 3rem;
+}
+
+#tasks {
+  margin-top: 30px;
+  width: 90%;
+}
+
+#tasks #add {
+  display: flex;
+  align-items: center;
+}
+
+#tasks #add input[type="text"] {
+  flex: 1;
+  padding: 0 10px;
+  height: 46px;
+  margin-right: 10px;
+  font-size: 1.4rem;
+}
+
+#tasks #add button {
+  height: 46px;
+  padding: 10px 20px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-radius: 3px;
+  color: white;
+  background-color: var(--green);
+}
+
+#tasks ul {
+  padding: 10px;
+  padding-top: 20px;
+  border-top: 1px solid var(--darkblue);
+  margin-top: 20px;
+}
+
+#tasks ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 3px;
+  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, .25);
+  padding: 20px 30px;
+  background-color: white;
+  font-size: 1.6rem;
+  transition: transform 100ms ease-in, opacity 90ms ease-out;
+}
+
+#tasks ul li div {
+  display: flex;
+  align-items: center;
+}
+
+#tasks ul li div input[type="checkbox"] {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+#tasks ul li div button {
+  padding: 0.5px 2.5px;
+  border-radius: 2px;
+  border: 1px solid tomato;
+  background-color: white;
+}
+
+#tasks ul li + li {
+  margin-top: 15px;
+}
+
+#tasks ul li.done {
+  opacity: 0.5;
+}
+
+
