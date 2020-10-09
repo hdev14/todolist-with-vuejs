@@ -5,8 +5,8 @@ const app = new Vue({
     todos: [
       {
         id: 1,
-        description: 'Do something amazing with VueJS 1',
-        done: true
+        description: 'Aprenda VueJS',
+        done: false
       }
     ]
   },

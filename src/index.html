@@ -6,12 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Chilanka&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <title>Todo List with VueJS</title>
+  <title>Todo List com VueJS</title>
 </head>
 
 <body>
   <div id="app">
-    <h1>Todo List with VueJS</h1>
+    <h1>Todo List com VueJS</h1>
     <div id="tasks">
 
       <div id="add">
@@ -23,6 +23,10 @@
       </div>
 
       <ul>
+        <li v-if="todos.length === 0">
+          <p>Adicione alguma tarefa.</p>
+        </li>
+
         <li v-for="todo in todos" :class="{ 'done': todo.done }" :key="todo.id">
           <p>{{ todo.description }}</p>
           <div>
